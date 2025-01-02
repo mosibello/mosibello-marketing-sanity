@@ -16,7 +16,9 @@ export const customFont = localFont({
 
 export default async function RootLayout({ children }) {
   const siteSettings = await getSiteSettings();
-  const favicon = urlFor(siteSettings.favicon).url();
+  const favicon = siteSettings.favicon
+    ? urlFor(siteSettings.favicon).url()
+    : null;
   console.log(favicon);
   return (
     <html lang="en">

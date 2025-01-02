@@ -9,7 +9,9 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const siteSettings = await getSiteSettings();
-  const favicon = urlFor(siteSettings.favicon).url();
+  const favicon = siteSettings.favicon
+    ? urlFor(siteSettings.favicon).url()
+    : null;
   return (
     <html lang="en">
       <body>
