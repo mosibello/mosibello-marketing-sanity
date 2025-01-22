@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "@/components/modules/Button";
 import { organization } from "@/lib/constants";
+import { stegaClean } from "@sanity/client/stega";
 
 const updateActiveStatusByKey = (data, uid) => {
   let itemFoundAtLevel = false;
@@ -65,7 +66,7 @@ const MenuLink = ({
       role="none"
     >
       <div className="b__header__header01__menu-item__text">
-        <Link href={elem.destination}>{elem.title}</Link>
+        <Link href={stegaClean(elem.destination)}>{elem.title}</Link>
         {hasChildren && (
           <button
             type="button"
