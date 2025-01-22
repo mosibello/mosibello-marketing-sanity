@@ -78,10 +78,10 @@ const ContentVariant07 = ({ data }) => {
                 </div>
                 {!data.disable_second_column && (
                   <div class="col-lg-6">
-                    {data.content_left && (
+                    {data.content_right && (
                       <RichtextField
                         className={`u__${stegaClean(data.content_size) || "h6"}`}
-                        content={data.content_left}
+                        content={data.content_right}
                       />
                     )}
                   </div>
