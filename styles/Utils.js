@@ -131,6 +131,9 @@ const Utils = css`
         h6 {
           color: var(--t-cp-base-white);
         }
+        a {
+          color: var(--t-cp-base-white);
+        }
       }
     }
     &__truncate {
