@@ -22,7 +22,7 @@ export default async function sitemap() {
         },
         'static_pages': {
             'url': $baseUrl + 'blog',
-            'lastModified': *[_type == "post" && ${QUERY_omitDrafts} && seo_no_index != true] | order(publish_date desc)[0...1] {"publish_date": publish_date + "T:00:00:00Z"}["publish_date"],
+            'lastModified': *[_type == "post" && ${QUERY_omitDrafts} && seo_no_index != true] | order(publish_date desc)[0...1] {"publish_date": publish_date + "T00:00:00Z"}["publish_date"],
         }
     }`,
     { baseUrl: process.env.NEXT_PUBLIC_BASE_URL + "/" }
